@@ -1,0 +1,8 @@
+data/raw/momo.xml
+data/db.sqlite3
+__pycache__/
+*.pyc
+*.pyo
+.env
+.DS_Store
+Thumbs.db
