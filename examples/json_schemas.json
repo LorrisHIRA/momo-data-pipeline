@@ -1,269 +1,76 @@
 {
-  "_description": "JSON Schema examples for MoMo SMS Data Pipeline - Team Nerds",
-  "_entities": ["users", "transaction_categories", "transactions", "system_logs"],
-
-  "users": [
-    {
-      "user_id": 1,
-      "full_name": "Jean Pierre Habimana",
-      "phone_number": "+250788123456",
-      "phone_normalized": "250788123456",
-      "account_type": "mobile_money",
-      "created_at": "2024-01-10T08:30:00Z",
-      "updated_at": "2024-03-15T10:00:00Z"
-    },
-    {
-      "user_id": 2,
-      "full_name": "Amina Uwase",
-      "phone_number": "+250722987654",
-      "phone_normalized": "250722987654",
-      "account_type": "mobile_money",
-      "created_at": "2024-02-05T09:15:00Z",
-      "updated_at": "2024-02-05T09:15:00Z"
-    },
-    {
-      "user_id": 3,
-      "full_name": "MTN Agent Kigali Central",
-      "phone_number": "+250788000001",
-      "phone_normalized": "250788000001",
-      "account_type": "agent",
-      "created_at": "2023-11-01T07:00:00Z",
-      "updated_at": "2024-01-20T12:00:00Z"
-    },
-    {
-      "user_id": 4,
-      "full_name": "Electricity Utility Rwanda",
-      "phone_number": "+250788555000",
-      "phone_normalized": "250788555000",
-      "account_type": "merchant",
-      "created_at": "2023-06-15T08:00:00Z",
-      "updated_at": "2023-06-15T08:00:00Z"
-    },
-    {
-      "user_id": 5,
-      "full_name": "Kalisa Eric",
-      "phone_number": "+250733456789",
-      "phone_normalized": "250733456789",
-      "account_type": "mobile_money",
-      "created_at": "2024-03-01T14:20:00Z",
-      "updated_at": "2024-03-01T14:20:00Z"
-    }
-  ],
-
-  "transaction_categories": [
-    {
+  "transaction_category": {
+    "description": "Represents a single MoMo transaction category",
+    "example": {
       "category_id": 1,
-      "category_name": "Incoming Money",
-      "category_code": "INCOMING",
+      "category_name": "incoming",
       "description": "Money received from another MoMo user",
-      "direction": "credit"
-    },
-    {
-      "category_id": 2,
-      "category_name": "Transfer to Mobile Number",
-      "category_code": "TRANSFER_OUT",
-      "description": "Money sent to another MoMo user's phone number",
-      "direction": "debit"
-    },
-    {
-      "category_id": 3,
-      "category_name": "Bank Deposit",
-      "category_code": "BANK_DEPOSIT",
-      "description": "Funds deposited from a linked bank account",
-      "direction": "credit"
-    },
-    {
-      "category_id": 4,
-      "category_name": "Airtime Purchase",
-      "category_code": "AIRTIME",
-      "description": "Airtime bought for self or another number",
-      "direction": "debit"
-    },
-    {
-      "category_id": 5,
-      "category_name": "Cash Power / Utility Payment",
-      "category_code": "UTILITY",
-      "description": "Payment for electricity or other utility services",
-      "direction": "debit"
-    },
-    {
-      "category_id": 6,
-      "category_name": "Cash Withdrawal",
-      "category_code": "WITHDRAWAL",
-      "description": "Cash withdrawn via an MoMo agent",
-      "direction": "debit"
-    },
-    {
-      "category_id": 7,
-      "category_name": "Third-Party Payment",
-      "category_code": "THIRD_PARTY",
-      "description": "Payment initiated by an external app or merchant",
-      "direction": "debit"
+      "created_at": "2024-05-10 16:30:51"
     }
-  ],
+  },
 
-  "transactions": [
-    {
-      "transaction_id": 1,
-      "transaction_ref": "TXN-20240315-001",
-      "category_id": 1,
-      "sender_id": 2,
-      "receiver_id": 1,
-      "amount": 15000.00,
-      "currency": "RWF",
-      "fee": 0.00,
-      "balance_after": 47500.00,
-      "transaction_date": "2024-03-15T08:45:00Z",
-      "raw_sms_body": "You have received 15,000 RWF from Amina Uwase (250722987654). Your new balance is 47,500 RWF.",
-      "status": "SUCCESS",
-      "source": "SMS_XML"
-    },
-    {
-      "transaction_id": 2,
-      "transaction_ref": "TXN-20240316-002",
-      "category_id": 2,
-      "sender_id": 1,
-      "receiver_id": 5,
-      "amount": 5000.00,
-      "currency": "RWF",
-      "fee": 50.00,
-      "balance_after": 42450.00,
-      "transaction_date": "2024-03-16T10:10:00Z",
-      "raw_sms_body": "You have transferred 5,000 RWF to Kalisa Eric (250733456789). Fee: 50 RWF. New balance: 42,450 RWF.",
-      "status": "SUCCESS",
-      "source": "SMS_XML"
-    },
-    {
-      "transaction_id": 3,
-      "transaction_ref": "TXN-20240317-003",
-      "category_id": 5,
-      "sender_id": 1,
-      "receiver_id": 4,
-      "amount": 3000.00,
-      "currency": "RWF",
-      "fee": 0.00,
-      "balance_after": 39450.00,
-      "transaction_date": "2024-03-17T07:30:00Z",
-      "raw_sms_body": "Payment of 3,000 RWF to Electricity Utility Rwanda successful. New balance: 39,450 RWF.",
-      "status": "SUCCESS",
-      "source": "SMS_XML"
-    },
-    {
-      "transaction_id": 4,
-      "transaction_ref": "TXN-20240318-004",
-      "category_id": 6,
-      "sender_id": 1,
-      "receiver_id": 3,
-      "amount": 10000.00,
-      "currency": "RWF",
-      "fee": 100.00,
-      "balance_after": 29350.00,
-      "transaction_date": "2024-03-18T14:00:00Z",
-      "raw_sms_body": "You have withdrawn 10,000 RWF at agent MTN Agent Kigali Central. Fee: 100 RWF. New balance: 29,350 RWF.",
-      "status": "SUCCESS",
-      "source": "SMS_XML"
-    },
-    {
-      "transaction_id": 5,
-      "transaction_ref": "TXN-20240319-005",
-      "category_id": 4,
-      "sender_id": 1,
-      "receiver_id": null,
-      "amount": 1000.00,
-      "currency": "RWF",
-      "fee": 0.00,
-      "balance_after": 28350.00,
-      "transaction_date": "2024-03-19T11:20:00Z",
-      "raw_sms_body": "Airtime purchase of 1,000 RWF successful. New balance: 28,350 RWF.",
-      "status": "SUCCESS",
-      "source": "SMS_XML"
-    }
-  ],
-
-  "system_logs": [
-    {
-      "log_id": 1,
-      "log_level": "INFO",
-      "process_stage": "PARSE_XML",
-      "message": "Successfully parsed 847 SMS records from momo.xml",
-      "records_processed": 847,
-      "records_failed": 0,
-      "created_at": "2024-03-20T06:00:01Z"
-    },
-    {
-      "log_id": 2,
-      "log_level": "INFO",
-      "process_stage": "CLEAN_NORMALIZE",
-      "message": "Normalization complete. 12 records had malformed dates and were corrected.",
-      "records_processed": 847,
-      "records_failed": 12,
-      "created_at": "2024-03-20T06:00:05Z"
-    },
-    {
-      "log_id": 3,
-      "log_level": "WARNING",
-      "process_stage": "CATEGORIZE",
-      "message": "3 records could not be categorized and were moved to dead_letter queue.",
-      "records_processed": 835,
-      "records_failed": 3,
-      "created_at": "2024-03-20T06:00:08Z"
-    },
-    {
-      "log_id": 4,
-      "log_level": "INFO",
-      "process_stage": "LOAD_DB",
-      "message": "Successfully upserted 832 transaction records into SQLite database.",
-      "records_processed": 832,
-      "records_failed": 0,
-      "created_at": "2024-03-20T06:00:12Z"
-    },
-    {
-      "log_id": 5,
-      "log_level": "ERROR",
-      "process_stage": "EXPORT_JSON",
-      "message": "Failed to write dashboard.json — permission denied on output path.",
-      "records_processed": 0,
-      "records_failed": 832,
-      "created_at": "2024-03-20T06:00:14Z"
-    }
-  ],
-
-  "complex_transaction_example": {
-    "_description": "A full transaction object with all related data nested — as would be returned by the API",
-    "transaction_id": 2,
-    "transaction_ref": "TXN-20240316-002",
-    "status": "SUCCESS",
-    "amount": 5000.00,
-    "fee": 50.00,
-    "currency": "RWF",
-    "balance_after": 42450.00,
-    "transaction_date": "2024-03-16T10:10:00Z",
-    "source": "SMS_XML",
-    "raw_sms_body": "You have transferred 5,000 RWF to Kalisa Eric (250733456789). Fee: 50 RWF. New balance: 42,450 RWF.",
-    "category": {
-      "category_id": 2,
-      "category_name": "Transfer to Mobile Number",
-      "category_code": "TRANSFER_OUT",
-      "direction": "debit"
-    },
-    "sender": {
+  "user": {
+    "description": "Represents a MoMo user extracted from SMS data",
+    "example": {
       "user_id": 1,
-      "full_name": "Jean Pierre Habimana",
-      "phone_number": "+250788123456",
-      "account_type": "mobile_money"
-    },
-    "receiver": {
-      "user_id": 5,
-      "full_name": "Kalisa Eric",
-      "phone_number": "+250733456789",
-      "account_type": "mobile_money"
-    },
-    "processing_log": {
-      "log_id": 4,
-      "process_stage": "LOAD_DB",
-      "log_level": "INFO",
-      "message": "Successfully upserted 832 transaction records into SQLite database.",
-      "created_at": "2024-03-20T06:00:12Z"
+      "full_name": "Jane Smith",
+      "phone_number": "250791666666",
+      "created_at": "2024-05-10 16:30:51"
+    }
+  },
+
+  "transaction": {
+    "description": "Represents a single MoMo transaction record",
+    "example": {
+      "transaction_id": 1,
+      "ft_id": "76662021700",
+      "category_id": 1,
+      "user_id": 1,
+      "amount": 2000.00,
+      "fee": 0.00,
+      "balance_after": 2000.00,
+      "transaction_date": "2024-05-10 16:30:51",
+      "sms_raw_date": 1715351458724,
+      "raw_body": "You have received 2000 RWF from Jane Smith on your mobile money account at 2024-05-10 16:30:51."
+    }
+  },
+
+  "system_log": {
+    "description": "Represents a single ETL pipeline log entry",
+    "example": {
+      "log_id": 1,
+      "event_type": "parse",
+      "message": "XML file parsed successfully",
+      "records_parsed": 1691,
+      "records_loaded": 1691,
+      "status": "success",
+      "created_at": "2024-05-10 16:30:51"
+    }
+  },
+
+  "complete_transaction": {
+    "description": "A full transaction object with all related data for API response",
+    "example": {
+      "transaction_id": 1,
+      "ft_id": "76662021700",
+      "amount": 2000.00,
+      "fee": 0.00,
+      "balance_after": 2000.00,
+      "transaction_date": "2024-05-10 16:30:51",
+      "raw_body": "You have received 2000 RWF from Jane Smith on your mobile money account at 2024-05-10 16:30:51.",
+      "category": {
+        "category_id": 1,
+        "category_name": "incoming",
+        "description": "Money received from another MoMo user"
+      },
+      "users": [
+        {
+          "user_id": 1,
+          "full_name": "Jane Smith",
+          "phone_number": "250791666666",
+          "role": "sender"
+        }
+      ]
     }
   }
-}
+}     
