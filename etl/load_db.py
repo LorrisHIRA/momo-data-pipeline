@@ -77,3 +77,82 @@ UNIQUE (transaction_id, user_id, role)
 
 conn.commit()
 logging.info("Database tables created successfully.")
+
+def get_or_create_category(conn, category_name):
+cursor = conn.cursor()
+cursor.execute(
+"SELECT category_id FROM transaction_categories WHERE category_name = ?",
+(category_name,)
+)
+row = cursor.fetchone()
+if row:
+return row["category_id"]
+cursor.execute(
+"INSERT INTO transaction_categories (category_name, description) VALUES (?, ?)",
+(category_name, f"Auto-created category: {category_name}")
+)
+conn.commit()
+return cursor.lastrowid
+
+
+def get_or_create_user(conn, full_name, phone_number):
+cursor = conn.cursor()
+cursor.execute(
+"SELECT user_id FROM users WHERE phone_number = ?",
+(phone_number,)
+)
+row = cursor.fetchone()
+if row:
+return row["user_id"]
+cursor.execute(
+"INSERT INTO users (full_name, phone_number) VALUES (?, ?)",
+(full_name, phone_number)
+)
+conn.commit()
+return cursor.lastrowid
+
+
+def upsert_transactions(conn, transactions):
+cursor = conn.cursor()
+inserted = 0
+skipped = 0
+
+for tx in transactions:
+try:
+category_id = get_or_create_category(conn, tx.get("category", "other"))
+user_id = None
+if tx.get("phone"):
+user_id = get_or_create_user(conn, tx.get("phone", ""), tx.get("phone", ""))
+
+cursor.execute("""
+INSERT OR REPLACE INTO transactions
+(ft_id, category_id, user_id, amount, fee, balance_after, transaction_date, sms_raw_date, raw_body)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+""", (
+tx.get("id"),
+category_id,
+user_id,
+tx.get("amount", 0.0),
+tx.get("fee", 0.0),
+tx.get("balance_after", 0.0),
+tx.get("date"),
+tx.get("sms_raw_date", 0),
+tx.get("body", "")
+))
+inserted += 1
+
+except Exception as e:
+logging.error(f"Failed to insert transaction {tx.get('id')}: {e}")
+skipped += 1
+
+conn.commit()
+logging.info(f"Inserted {inserted} transactions, skipped {skipped}.")
+return inserted
+
+
+def load_to_db(transactions):
+conn = get_connection()
+create_tables(conn)
+count = upsert_transactions(conn, transactions)
+conn.close()
+print(f" → {count} records loaded into database")
