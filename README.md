@@ -13,7 +13,11 @@ through an interactive dashboard with charts and summaries.
 | Bruce Manzi | b.manzi@alustudent.com |
 | Lorris Hira | l.hira@alustudent.com |
 | A. Irakarama | a.irakarama1@alustudent.com |
-
+# Tech Stack
+- Python (ETL Pipeline)
+- SQLite (Database)
+- HTML / CSS / JavaScript (Frontend Dashboard)
+- FastAPI (Optional API layer)
 ## Architecture Diagram
 ![System Architecture](https://github.com/LorrisHIRA/momo-data-pipeline/blob/main/momo_sms_system_architecture.svg)
 
