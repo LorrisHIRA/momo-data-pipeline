@@ -10,7 +10,7 @@
 | 2024-05-11 | Grammarly | Grammar checking in design rationale | Fixed sentence structure in rationale document |
 
 ## Notes
-- All Entity Relationship Diagram design decisions were made by the grop based on the XML data
+- All Entity Relationship Diagram design decisions were made by the group based on the XML data
 - All SQL schema logic was written and agreed upon by the group
 - All relationship cardinality decisions were made by the group
 - AI was only used to check for grammar errors and research on MySQL and how to use it
