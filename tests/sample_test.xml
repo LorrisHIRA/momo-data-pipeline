@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<smses count="3">
+    <sms protocol="0" address="M-Money" date="1715351458724" type="1"
+        body="You have received 2000 RWF from Jane Smith (*********013) on your mobile money account at 2024-05-10 16:30:51. Your new balance:2000 RWF. Financial Transaction Id: 76662021700." />
+    <sms protocol="0" address="M-Money" date="1715351506754" type="1"
+        body="TxId: 73214484437. Your payment of 1,000 RWF to Jane Smith 12845 has been completed at 2024-05-10 16:31:39. Your new balance: 1,000 RWF. Fee was 0 RWF." />
+    <sms protocol="0" address="M-Money" date="1715452495316" type="1"
+        body="*165*S*10000 RWF transferred to Samuel Carter (250791666666) from 36521838 at 2024-05-11 20:34:47. Fee was: 100 RWF. New balance: 28300 RWF." />
+</smses>
