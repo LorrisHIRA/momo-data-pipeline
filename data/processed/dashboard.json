@@ -1,0 +1,221 @@
+{
+  "generated_at": "2026-05-18 12:30:12",
+  "total_transactions": 1691,
+  "total_amount_rwf": 32947396.0,
+  "by_category": {
+    "incoming": {
+      "count": 63,
+      "total_rwf": 5366753.0
+    },
+    "payment": {
+      "count": 715,
+      "total_rwf": 6157492.0
+    },
+    "bank_deposit": {
+      "count": 248,
+      "total_rwf": 11012800.0
+    },
+    "outgoing": {
+      "count": 585,
+      "total_rwf": 9731151.0
+    },
+    "unknown": {
+      "count": 54,
+      "total_rwf": 273200.0
+    },
+    "withdrawal": {
+      "count": 3,
+      "total_rwf": 94000.0
+    },
+    "airtime": {
+      "count": 17,
+      "total_rwf": 112000.0
+    },
+    "bank_transfer": {
+      "count": 6,
+      "total_rwf": 200000.0
+    }
+  },
+  "recent_transactions": [
+    {
+      "id": "1736979209935",
+      "body": "TxId: 37832903831. Your payment of 24,900 RWF to Robert Brown 23478 has been completed at 2025-01-16 00:13:22. Your new balance: 4,900 RWF. Fee was 0 RWF.",
+      "amount": 24900.0,
+      "date": "2025-01-16 00:13:29",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736966106920",
+      "body": "TxId: 51350491173. Your payment of 1,500 RWF to Samuel Carter 58769 has been completed at 2025-01-15 20:34:58. Your new balance: 29,800 RWF. Fee was 0 RWF.",
+      "amount": 1500.0,
+      "date": "2025-01-15 20:35:06",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736965579664",
+      "body": "TxId: 26811810649. Your payment of 27,000 RWF to Robert Brown 60033 has been completed at 2025-01-15 20:26:12. Your new balance: 31,300 RWF. Fee was 0 RWF.",
+      "amount": 27000.0,
+      "date": "2025-01-15 20:26:19",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736954506185",
+      "body": "*165*S*6000 RWF transferred to Jane Smith (250788999999) from 36521838 at 2025-01-15 17:21:35 . Fee was: 100 RWF. New balance: 58300 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+      "amount": 6000.0,
+      "date": "2025-01-15 17:21:46",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "outgoing"
+    },
+    {
+      "id": "1736941912259",
+      "body": "*165*S*8000 RWF transferred to Samuel Carter (250791666666) from 36521838 at 2025-01-15 13:51:46 . Fee was: 100 RWF. New balance: 64400 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+      "amount": 8000.0,
+      "date": "2025-01-15 13:51:52",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "outgoing"
+    },
+    {
+      "id": "1736882759238",
+      "body": "TxId: 55109401801. Your payment of 14,500 RWF to Samuel Carter 39233 has been completed at 2025-01-14 21:25:51. Your new balance: 72,500 RWF. Fee was 0 RWF.",
+      "amount": 14500.0,
+      "date": "2025-01-14 21:25:59",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736878131643",
+      "body": "TxId: 30801532894. Your payment of 1,000 RWF to Jane Smith 61758 has been completed at 2025-01-14 20:08:44. Your new balance: 87,000 RWF. Fee was 0 RWF.",
+      "amount": 1000.0,
+      "date": "2025-01-14 20:08:51",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736868583669",
+      "body": "*164*S*Y'ello,A transaction of 10000 RWF by Data Bundle MTN on your MOMO account was successfully completed at 2025-01-14 17:29:36. Message from debit receiver: . Your new balance:88000 RWF. Fee was 0 RWF. Financial Transaction Id: 18087757600. External Transaction Id: 17368685383021954.*EN#",
+      "amount": 10000.0,
+      "date": "2025-01-14 17:29:43",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "airtime"
+    },
+    {
+      "id": "1736852580720",
+      "body": "TxId: 36439238929. Your payment of 3,800 RWF to Jane Smith 46055 has been completed at 2025-01-14 13:02:52. Your new balance: 98,000 RWF. Fee was 0 RWF.",
+      "amount": 3800.0,
+      "date": "2025-01-14 13:03:00",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736849812482",
+      "body": "*165*S*20000 RWF transferred to Jane Smith (250789888888) from 36521838 at 2025-01-14 12:16:45 . Fee was: 250 RWF. New balance: 101800 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+      "amount": 20000.0,
+      "date": "2025-01-14 12:16:52",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "outgoing"
+    },
+    {
+      "id": "1736792566151",
+      "body": "TxId: 33961366964. Your payment of 35,300 RWF to Jane Smith 23980 has been completed at 2025-01-13 20:22:16. Your new balance: 122,050 RWF. Fee was 0 RWF.",
+      "amount": 35300.0,
+      "date": "2025-01-13 20:22:46",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736772459072",
+      "body": "*165*S*820000 RWF transferred to Jane Smith (250790777777) from 36521838 at 2025-01-13 14:47:32 . Fee was: 1500 RWF. New balance: 157350 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+      "amount": 820000.0,
+      "date": "2025-01-13 14:47:39",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "outgoing"
+    },
+    {
+      "id": "1736772422807",
+      "body": "*165*S*5000 RWF transferred to Linda Green (250790777777) from 36521838 at 2025-01-13 14:46:56 . Fee was: 100 RWF. New balance: 978850 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+      "amount": 5000.0,
+      "date": "2025-01-13 14:47:02",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "outgoing"
+    },
+    {
+      "id": "1736772187153",
+      "body": "Yello!Umaze kugura 3000Frw=2500Mins+100SMS igura 3,000 RWF",
+      "amount": 3000.0,
+      "date": "2025-01-13 14:43:07",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "unknown"
+    },
+    {
+      "id": "1736772185704",
+      "body": "*162*TxId:18064613724*S*Your payment of 3000 RWF to Bundles and Packs with token  has been completed at 2025-01-13 14:42:09. Fee was 0 RWF. Your new balance: 983950 RWF . Message: - -. *EN#",
+      "amount": 3000.0,
+      "date": "2025-01-13 14:43:05",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736772049093",
+      "body": "You have received 964177 RWF from Jane Smith (*********683) on your mobile money account at 2025-01-13 14:40:42. Message from sender: . Your new balance:986950 RWF. Financial Transaction Id: 88289015616.",
+      "amount": 964177.0,
+      "date": "2025-01-13 14:40:49",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "incoming"
+    },
+    {
+      "id": "1736770965767",
+      "body": "TxId: 31581671113. Your payment of 10,000 RWF to Jane Smith 97571 has been completed at 2025-01-13 14:22:39. Your new balance: 22,773 RWF. Fee was 0 RWF.",
+      "amount": 10000.0,
+      "date": "2025-01-13 14:22:45",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736767939858",
+      "body": "*165*S*4000 RWF transferred to Samuel Carter (250791666666) from 36521838 at 2025-01-13 13:32:12 . Fee was: 100 RWF. New balance: 32773 RWF. Kugura ama inite cg interineti kuri MoMo, Kanda *182*2*1# .*EN#",
+      "amount": 4000.0,
+      "date": "2025-01-13 13:32:19",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "outgoing"
+    },
+    {
+      "id": "1736699398066",
+      "body": "TxId: 52225700417. Your payment of 31,000 RWF to Linda Green 29282 has been completed at 2025-01-12 18:29:48. Your new balance: 36,873 RWF. Fee was 0 RWF.",
+      "amount": 31000.0,
+      "date": "2025-01-12 18:29:58",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "payment"
+    },
+    {
+      "id": "1736699371897",
+      "body": "*113*R*A bank deposit of 50000 RWF has been added to your mobile money account at 2025-01-12 18:29:25. Your NEW BALANCE :67873 RWF. Cash Deposit::CASH::::0::250795963036.Thank you for using MTN MobileMoney.*EN#",
+      "amount": 50000.0,
+      "date": "2025-01-12 18:29:31",
+      "phone": "M-Money",
+      "raw_type": "1",
+      "category": "bank_deposit"
+    }
+  ]
+}

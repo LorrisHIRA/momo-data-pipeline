@@ -1,0 +1,17 @@
+2026-05-18 14:30:12,582 [INFO] ============================================================
+2026-05-18 14:30:12,588 [INFO] ETL Pipeline started at 2026-05-18 12:30:12.588111
+2026-05-18 14:30:12,633 [INFO] Parsed 1691 valid records, 0 dead letters.
+2026-05-18 14:30:12,696 [INFO] Cleaned 1691 transactions.
+2026-05-18 14:30:12,807 [INFO] Database tables created successfully.
+2026-05-18 14:30:12,878 [ERROR] Failed to insert transaction 1716722251279: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,880 [ERROR] Failed to insert transaction 1716722536056: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,881 [ERROR] Failed to insert transaction 1716722898035: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,881 [ERROR] Failed to insert transaction 1716727817032: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,882 [ERROR] Failed to insert transaction 1716736638930: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,883 [ERROR] Failed to insert transaction 1716828002847: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,921 [ERROR] Failed to insert transaction 1724487582877: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,922 [ERROR] Failed to insert transaction 1724487819552: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,923 [ERROR] Failed to insert transaction 1724487828516: CHECK constraint failed: amount > 0
+2026-05-18 14:30:12,989 [INFO] Inserted 1682 transactions, skipped 9.
+2026-05-18 14:30:13,003 [INFO] Dashboard JSON exported to C:\Users\USER\Desktop\momo-data-pipeline\data\processed\dashboard.json
+2026-05-18 14:30:13,004 [INFO] ETL Pipeline completed successfully.
