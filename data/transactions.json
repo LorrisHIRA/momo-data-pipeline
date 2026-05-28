@@ -2,7 +2,7 @@
   {
     "id": 1,
     "transaction_type": "incoming",
-    "amount": 2000.0,
+    "amount": 9999,
     "sender": "Jane Smith",
     "receiver": null,
     "timestamp": "2024-05-10 16:30:51",
