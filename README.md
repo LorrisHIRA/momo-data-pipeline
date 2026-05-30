@@ -1,8 +1,3 @@
-## Team Participation Sheet
-[View our Team Participation Sheet](https://docs.google.com/spreadsheets/d/17xw75nTB7covNYLvPmYJ5s7HihneO4bIuoLtKmFfnaA/edit?usp=sharing)
-
-The PDF report can be found at: docs/MoMo_API_Report.pdf
-
 # 🧾 MoMo Data Dashboard — Team Nerds
 
 ## Project Description
@@ -18,11 +13,15 @@ through an interactive dashboard with charts and summaries.
 | Bruce Manzi | b.manzi@alustudent.com |
 | Lorris Hira | l.hira@alustudent.com |
 | A. Irakarama | a.irakarama1@alustudent.com |
-# Tech Stack
+
+## Team Participation Sheet
+[View our Team Participation Sheet](https://docs.google.com/spreadsheets/d/17xw75nTB7covNYLvPmYJ5s7HihneO4bIuoLtKmFfnaA/edit?usp=sharing)
+
+## Tech Stack
 - Python (ETL Pipeline)
 - SQLite (Database)
 - HTML / CSS / JavaScript (Frontend Dashboard)
-- FastAPI (Optional API layer)
+
 ## Architecture Diagram
 ![System Architecture](https://github.com/LorrisHIRA/momo-data-pipeline/blob/main/momo_sms_system_architecture.svg)
 
@@ -30,59 +29,25 @@ through an interactive dashboard with charts and summaries.
 [View our Scrum Board on Trello](https://trello.com/b/2LSekMKA/my-trello-boardi)
 
 ## Database Design
-
-### Overview
-The database is built on MySQL and contains 5 tables designed to store,
-categorize and analyze MTN MoMo SMS transaction data extracted from 1,691
-SMS messages.
-
-### Tables
-| Table | Description |
-|-------|-------------|
-| `transaction_categories` | Stores the 8 types of MoMo transactions |
-| `users` | Stores sender/receiver information extracted from SMS |
-| `transactions` | Main table storing all transaction records |
-| `transaction_user_roles` | Junction table resolving M:N between transactions and users |
-| `system_logs` | Tracks ETL pipeline processing events |
-
-### Entity Relationships
-- `transaction_categories` → `transactions` (One to Many)
-- `users` → `transactions` (One to Many)
-- `transactions` → `transaction_user_roles` (One to Many)
-- `users` → `transaction_user_roles` (One to Many)
-
-### ERD Diagram
-See [docs/erd_diagram.png](docs/erd_diagram.png) for the full Entity Relationship Diagram.
-
-### How to Set Up the Database
-1. Install XAMPP and start Apache and MySQL
-2. Open phpMyAdmin at `http://localhost:8080/phpmyadmin`
-3. Click the SQL tab
-4. Copy and paste the contents of `database/database_setup.sql`
-5. Click Go
+The database contains 5 tables designed to store, categorize and analyze MTN MoMo SMS transaction data extracted from 1,691 SMS messages.
 
 ## REST API
-
-The system exposes a REST API built with Python's `http.server`.
+The system exposes a REST API built with Python's http.server.
 
 ### How to Run the API
-
-1. Make sure you have parsed the XML data first:
+1. Parse the XML data first:
 ```bash
 python etl/parse_xml.py
 ```
-
 2. Start the API server:
 ```bash
 python api/server.py
 ```
-
-3. The API will be running at `http://localhost:8080`
+3. The API will be running at http://localhost:8080
 
 ### Authentication
-All endpoints require Basic Auth:
-- **Username:** admin
-- **Password:** password123
+- Username: admin
+- Password: password123
 
 ### Endpoints
 | Method | Endpoint | Description |
@@ -94,3 +59,9 @@ All endpoints require Basic Auth:
 | DELETE | /transactions/{id} | Delete a transaction |
 
 See [docs/api_docs.md](docs/api_docs.md) for full documentation.
+See [docs/MoMo_API_Report.pdf](docs/MoMo_API_Report.pdf) for the full project report.
+
+## DSA Benchmark
+```bash
+python dsa/search.py
+```
